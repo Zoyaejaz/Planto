@@ -3,7 +3,81 @@ import { Play, Star, ArrowRight,ChevronRight } from 'lucide-react';
 
 const PlantWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+const HorizontalPlantCard = ({ 
+    title = "For Small Desk AI Plant",
+    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    price = "Rs. 599/-",
+    image = "/api/placeholder/200/200",
+    imagePosition = "left"
+  }) => {
+    return (
+      <div className="bg-white/10 backdrop-blur-md border border-white rounded-3xl p-6 ml-30 mt-20 mb-40 shadow-2xl max-w-4xl">
+        <div className={`flex items-center gap-6 ${imagePosition === 'right' ? 'flex-row-reverse' : ''}`}>
+          {/* Plant Image */}
+          <div className="flex-shrink-0">
+            <div className="w-48 h-48 ">
+              <img
+                src={image}
+                alt={title}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="hidden w-full h-full items-center justify-center text-gray-400 text-sm">
+                Plant Image
+              </div>
+            </div>
+          </div>
 
+          {/* Content */}
+          <div className="flex-1 space-y-4">
+            {/* Title */}
+            <h3 className="text-white text-2xl font-bold font-inter">
+              {title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-white font-inter text-sm leading-relaxed">
+              {description}
+            </p>
+
+            {/* Price */}
+            <div className="text-white text-2xl font-bold pt-0">
+              {price}
+            </div>
+
+            {/* Buttons */}
+            <div className="flex items-center gap-4">
+              <button className="bg-transparent border border-white  text-white px-6 py-2 rounded-lg ">
+                Buy Now
+              </button>
+              <div className="flex items-center  border-2 border-white rounded-lg ">
+               <button className="  p-2 rounded-lg ">
+ <svg 
+   width="25" 
+   height="25" 
+   viewBox="0 0 24 24" 
+   fill="none" 
+   stroke="currentColor" 
+   strokeWidth="2" 
+   strokeLinecap="round" 
+   strokeLinejoin="round"
+   className="text-white"
+ >
+   <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+   <line x1="3" y1="6" x2="21" y2="6"/>
+   <path d="m16 10a4 4 0 0 1-8 0"/>
+ </svg>
+</button>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
   return (
     <div className="relative w-full min-h-screen bg-cover bg-no-repeat" style={{
       backgroundImage: "url('/Back.jpg')",
@@ -11,7 +85,7 @@ const PlantWebsite = () => {
     }}>
       
       {/* Navbar */}
-      <nav className="relative z-50 bg-opacity-0 shadow-lg">
+      <nav className="relative z-50 bg-opacity-0 border-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             
@@ -225,6 +299,34 @@ const PlantWebsite = () => {
 
             </div>
           </div>
+           <div className="mt-45">
+            <div className="max-w-6xl mx-auto space-y-8">
+              {/* First Card - Image on Left */}
+              <HorizontalPlantCard
+                title="For Small Desk AI Plant"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                price="Rs. 599/-"
+                image="t1.jpg"
+                imagePosition="left"
+              />
+
+              {/* Second Card - Image on Right */}
+              <HorizontalPlantCard
+                title="For Fresh Deco AI Plant"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                price="Rs. 499/-"
+                image="t2.png"
+                imagePosition="right"
+              />
+            </div>
+          </div>
+          <div className="text-center mb-35 mt-20">
+          <div className="flex justify-center items-center mt-10  gap-1">
+                <img src="before.png" alt="Before" className="w-10 h-10" />
+                <h2 className="text-xl font-semibold text-white font-inter whitespace-nowrap">Our Top Selling</h2>
+                <img src="after.png" alt="After" className="w-10 h-10" />
+              </div>
+        </div>
         </div>
       </div>  
     </div>

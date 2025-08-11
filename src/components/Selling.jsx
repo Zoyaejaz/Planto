@@ -120,6 +120,7 @@ const PlantCatalog = () => {
               <span className="text-white font-bold font-inter ml-23">
                 {plant.price}
               </span>
+              <div className="flex items-center  border-2 border-white rounded-lg ">
              <button className="  p-2 rounded-lg ">
  <svg 
    width="25" 
@@ -137,6 +138,7 @@ const PlantCatalog = () => {
    <path d="m16 10a4 4 0 0 1-8 0"/>
  </svg>
 </button>
+</div>
             </div>
 
             {/* Star Rating */}
