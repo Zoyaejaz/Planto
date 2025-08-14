@@ -90,7 +90,7 @@ const PlantCatalog = () => {
         {plants.map((plant) => (
           <div
             key={plant.id}
-            className="bg-white/10 rounded-2xl p-6 border border-white/20 backdrop-blur-sm "
+            className="bg-white/10 rounded-[50px] p-6 border border-white/60 backdrop-blur-xl "
           >
             {/* Plant Image */}
             <div className="flex justify-center mb-4">

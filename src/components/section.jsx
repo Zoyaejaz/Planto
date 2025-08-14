@@ -248,7 +248,7 @@ const HorizontalPlantCard = ({
               {/* Featured Plant Card */}
 <div 
   className="bg-white/10 backdrop-blur-md border border-
-   p-8 shadow-2xl  relative overflow-hidden w-90 h-90 rounded-4xl ml-50 mt-2"
+   p-8 shadow-2xl  relative overflow-hidden w-90 h-90 rounded-[30px] ml-50 mt-2"
   style={{
     
   }}

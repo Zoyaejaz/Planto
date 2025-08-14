@@ -38,7 +38,7 @@ const PlantoHomepage = () => {
         Plants Collection's
       </h1>
 
-      <div className="text-white font-inter font-medium text-xl leading-relaxed mb-4 max-w-3xl">
+      <div className="text-white font-inter font-medium text-xl leading-relaxed mb-4 max-w-5xl">
         <p>Lorem ipsum dolor sit amet, consectetur</p> <p>adipiscing elit, sed do eiusmod tempor</p><p> incididunt ut labore et dolore magna</p><p>aliqua.Duis aute irure dolor in</p><p>reprehenderit in voluptate velit esse cillum</p><p>dolore eu fugiat nulla pariatur.</p>
       </div>
 
